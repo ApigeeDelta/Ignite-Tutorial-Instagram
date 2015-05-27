@@ -1,0 +1,19 @@
+{
+  "$app": {
+    "actions": [],
+    "attributes": {
+      "view.index": "/viewInstagramSearch.json",
+      "debug.layout.enabled": false,
+      "logging.datasource.enabled": true,
+      "logging.level": "verbose",
+      "mode": "debug",
+      "navigationBar.enabled": false,
+      "drawer.l.url": "/menu.json",
+      "drawer.velocity": 1000,
+      "drawer.l.max.w": 264
+    },
+    "datasources": [
+      
+    ]
+  }
+}

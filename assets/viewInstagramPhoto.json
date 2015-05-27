@@ -1,0 +1,212 @@
+{
+  "$view": {
+    "attributes": {
+      "_id": "viewInstagramPhoto",
+      "statusBar.style": "light",
+      "bg.color": "#000000"
+    },
+    "actions": [],
+    "controls": [
+      {
+        "_id": "layoutMain",
+        "_type": "Layout",
+        "attributes": {
+          "layoutType": "absolute",
+          "padding.top": 70,
+          "size.h": "100%",
+          "size.w": "100%"
+        },
+        "controls": [
+          {
+            "_id": "imageBg",
+            "_type": "Image",
+            "attributes": {
+              "image": "/images/bg_2x568.png",
+              "layoutType": "absolute",
+              "size.h": "100%",
+              "size.w": "100%"
+            }
+          },
+          {
+            "_id": "layoutHeader",
+            "_type": "Layout",
+            "attributes": {
+              "bg.color": "#000000",
+              "layoutType": "float",
+              "size.h": 70,
+              "size.w": "100%"
+            },
+            "controls": [
+              {
+                "_id": "layoutHeader",
+                "_type": "Layout",
+                "attributes": {
+                  "bg.color": "#000000",
+                  "layoutType": "absolute",
+                  "margin.top": 20,
+                  "size.h": 50,
+                  "size.w": "100%"
+                },
+                "controls": [
+                  {
+                    "_id": "title",
+                    "_type": "Text",
+                    "attributes": {
+                      "align.h": "center",
+                      "align.v": "bottom",
+                      "color": "ffffff",
+                      "font": "HelveticaNeue-Thin:26",
+                      "layoutType": "float",
+                      "margin.top": 20,
+                      "size.h": 50,
+                      "size.w": "100%",
+                      "text": "Photo",
+                      "text.align": "center"
+                    }
+                  },
+                  {
+                    "_id": "imageLeft",
+                    "_type": "Image",
+                    "actions": [
+                      {
+                        "_type": "Navigate",
+                        "attributes": {
+                          "stackType": "pop"
+                        },
+                        "on": "touchUp"
+                      }
+                    ],
+                    "attributes": {
+                      "align.h": "left",
+                      "align.v": "middle",
+                      "backround.color": "ff00ff",
+                      "image": "images/btn_back_44x44.png",
+                      "layoutType": "float",
+                      "margin.top": 40,
+                      "size.h": 44,
+                      "size.w": 44,
+                      "visible": true
+                    }
+                  },
+                  {
+                    "_id": "imageRight",
+                    "_type": "Image",
+                    "actions": [
+                      {
+                        "_type": "Function",
+                        "attributes": {
+                          "_target": "socialTwitter",
+                          "functionName": "present"
+                        },
+                        "on": "touchUp"
+                      }
+                    ],
+                    "attributes": {
+                      "align.h": "right",
+                      "align.v": "middle",
+                      "backround.color": "ff00ff",
+                      "image": "images/btn_tweet_44x44.png",
+                      "layoutType": "float",
+                      "margin.top": 40,
+                      "size.h": 44,
+                      "size.w": 44,
+                      "visible": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "_id": "layoutPhotoDetail",
+            "_type": "Layout",
+            "attributes": {
+              "padding": 4,
+              "size.h": "[[device.screen.w]]",
+              "size.w": "100%"
+            },
+            "controls": [
+              {
+                "_id": "imageAlreadyLoaded",
+                "_type": "Image",
+                "actions": [],
+                "attributes": {
+                  "image": "[[$session.photoThumbUrl]]",
+                  "layoutType": "absolute",
+                  "padding": 4,
+                  "size.h": "100%",
+                  "size.w": "100%"
+                }
+              },
+              {
+                "_id": "imageStandardResolution",
+                "_type": "Image",
+                "actions": [
+                  {
+                    "_type": "Alert",
+                    "attributes": {
+                      "message": "You touched the button!",
+                      "title": "touchUp"
+                    },
+                    "enabled": true,
+                    "on": "touchUp"
+                  }
+                ],
+                "attributes": {
+                  "image": "[[$session.photoUrl]]",
+                  "size.h": "100%",
+                  "size.w": "100%"
+                }
+              }
+            ]
+          },
+          {
+            "_id": "textCaption",
+            "_type": "Text",
+            "attributes": {
+              "align.h": "center",
+              "color": "#ffffff",
+              "font": "HelveticaNeue:18",
+              "margin.top": 4,
+              "padding.left": 4,
+              "size.w": "100%",
+              "text": "by @[[$session.photoPhotographer]]"
+            }
+          },
+          {
+            "_id": "textPhotographer",
+            "_type": "Text",
+            "attributes": {
+              "align.h": "center",
+              "color": "#ffffff",
+              "font": "HelveticaNeue-Medium:13",
+              "margin.top": 4,
+              "padding.left": 4,
+              "size.w": "100%",
+              "text": "[[$session.photoCaption]]"
+            }
+          },
+          {
+            "_id": "socialTwitter",
+            "_type": "Social",
+            "actions": [
+              {
+                "_type": "Alert",
+                "attributes": {
+                  "title": "success"
+                },
+                "on": "success"
+              }
+            ],
+            "attributes": {
+              "image": "[[$session.photoUrl]]",
+              "platform": "twitter",
+              "text": "[[$session.photoCaption]] by @[[$session.photoPhotographer]] on @instagram"
+            }
+          }
+        ]
+      }
+    ],
+    "datasources": []
+  }
+}

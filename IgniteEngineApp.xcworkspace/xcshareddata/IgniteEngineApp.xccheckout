@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DEBB1DC0-6BFB-4B75-AFC7-A7CEEDB77B49</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IgniteEngineApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E38BF4593485F1F5317073455F26C63CEA1D8EA4</key>
+		<string>https://github.com/ApigeeDelta/Apigee-Demo-InsightsOffers.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IgniteEngineApp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E38BF4593485F1F5317073455F26C63CEA1D8EA4</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ApigeeDelta/Apigee-Demo-InsightsOffers.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E38BF4593485F1F5317073455F26C63CEA1D8EA4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E38BF4593485F1F5317073455F26C63CEA1D8EA4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Apigee-Demo-InsightsOffers</string>
+		</dict>
+	</array>
+</dict>
+</plist>
